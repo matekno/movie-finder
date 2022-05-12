@@ -76,7 +76,7 @@ body{
     height:100vh;
     font-family: 'Lato';
 }
-.wrapper{
+/* .wrapper{
     position: absolute;
     top:50%;
     left:50%;
@@ -87,7 +87,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-}
+} */
 .card{
     flex: 1;
     flex-basis: 300px;
