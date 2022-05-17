@@ -1,15 +1,11 @@
-import './App.css';
+import './Movie.css';
 import Navbar from './components/Navbar';
 import Header from './components/Header';
 import './components/global.css';
 import Movies from './peliculas.json'
-import Slider from './components/Slider';
-import Options from './components/Options';
-
-/*FUNCTIONAL EXAMPLE: https://codepen.io/sreeharshrajan/pen/abywYRj*/
 
 
-function App() {
+function Movie() {
   return (
     <div className="App">
       <Navbar />

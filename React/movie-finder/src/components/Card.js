@@ -2,23 +2,23 @@ import React from "react";
 import './global.css';
 
 const Card = ({ movie }) => {
-    console.log(movie)
     return (
         <div>
-            <div className="slide card">
-                <img src={movie.poster_path} />
+            <div className="slide card" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w200${movie.poster_path})` }}>
+                
+                
+                <p>{movie.desc}</p>
                 <div className="descriptions">
-                    <h1>{movie.original_title}</h1>
-                    <p>{movie.desc}</p>
-                    {/* <a href={movie.externalLink}>
-                        <button>
-                            <i className="fab fa-youtube"></i>
-                            Ir al Link!
-                        </button>
-                    </a> */}
+                <h1>{movie.original_title}</h1>                    <p>{movie.overview}</p>
+                    <a href=""><button>
+                    Ver más
+                    </button></a>
+
                 </div>
-            </div>
-        </div>
+                </div>
+                </div>
+
+
     );
 }
 export default Card;
