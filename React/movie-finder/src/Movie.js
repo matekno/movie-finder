@@ -6,7 +6,7 @@ import Movies from './peliculas.json'
 
 
 function Movie() {
-  return (
+      return (
     <div className="App">
       <Navbar />
       <Header />
