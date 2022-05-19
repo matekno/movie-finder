@@ -5,9 +5,9 @@ import Card from './Card';
 
 const Slider = ( {title, movies}  ) => {
     return ( 
-        <div>
-            <h1>{title}</h1>
-            <div className="slider mb-4 ml-4">
+        <div className="ml-5">
+            <h1 className="niceTitle">{title}</h1>
+            <div className="slider mb-4 ml-4 ml-5">
                 {movies.map((card) =>{
                     return (
                         <Card key={card.id} movie={card}/>

@@ -1,73 +1,67 @@
 body {
-    background-color: #b1cee6;
-    padding: 0px;
-    margin: 0px;
-    font-family: 'Lato';
-    width: 100%;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
+  padding: 0px;
+  margin: 0px;
+  font-family: "Lato";
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
 .search-container {
-    background: #fff;
-    height: 30px;
-    border-radius: 30px;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: 0.8s;
-    box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .3),
-        -4px -4px 6px 0 rgba(116, 125, 136, .2),
-        inset -4px -4px 6px 0 rgba(255, 255, 255, .2),
-        inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+  background: #fff;
+  height: 30px;
+  border-radius: 30px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.8s;
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3),
+    -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
 }
 
-.search-container:hover>.search-input {
-    width: 400px;
+.search-container:hover > .search-input {
+  width: 400px;
 }
 
 .search-container .search-input {
-    background: transparent;
-    border: none;
-    outline: none;
-    width: 0px;
-    font-weight: 500;
-    font-size: 16px;
-    transition: 0.8s;
-
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 0px;
+  font-weight: 500;
+  font-size: 16px;
+  transition: 0.8s;
 }
 
 .search-container .search-btn .fas {
-    color: #5cbdbb;
+  color: #5cbdbb;
 }
 
 @keyframes hoverShake {
-    0% {
-        transform: skew(0deg, 0deg);
-    }
+  0% {
+    transform: skew(0deg, 0deg);
+  }
 
-    25% {
-        transform: skew(5deg, 5deg);
-    }
+  25% {
+    transform: skew(5deg, 5deg);
+  }
 
-    75% {
-        transform: skew(-5deg, -5deg);
-    }
+  75% {
+    transform: skew(-5deg, -5deg);
+  }
 
-    100% {
-        transform: skew(0deg, 0deg);
-    }
+  100% {
+    transform: skew(0deg, 0deg);
+  }
 }
 
-.navbar{
-    width: 100%;
+.navbar {
+  width: 100%;
 }
-
-
-
-
 
 /* .wrapper{
     position: absolute;
@@ -82,180 +76,165 @@ body {
     justify-content: space-between;
 } */
 .card {
-    flex: 1;
-    flex-basis: 300px;
-    flex-grow: 0;
-    height: 448px;
-    width: 300px;
+  flex: 1;
+  flex-basis: 300px;
+  flex-grow: 0;
+  height: 448px;
+  width: 300px;
 
-    border: 2px solid #fff;
-    box-shadow: 0px 4px 7px rgba(0, 0, 0, .5);
-    cursor: pointer;
-    transition: all .5s cubic-bezier(.8, .5, .2, 1.4);
-    overflow: hidden;
-    position: relative;
-    background-repeat: no-repeat;
-    background-size: 300px 448px;
-
+  border: 2px solid #fff;
+  box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+  overflow: hidden;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: 300px 448px;
 }
 
 .card img {
-    width: 100%;
-    height: 100%;
-    transition: all .5s cubic-bezier(.8, .5, .2, 1.4);
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
 }
 
 .descriptions {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    background-color: rgba(215, 215, 215, 0.7);
-    width: 100%;
-    height: 100%;
-    transition: all .7s ease-in-out;
-    padding: 20px;
-    box-sizing: border-box;
-    clip-path: circle(0% at 100% 100%);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(215, 215, 215, 0.7);
+  width: 100%;
+  height: 100%;
+  transition: all 0.7s ease-in-out;
+  padding: 20px;
+  box-sizing: border-box;
+  clip-path: circle(0% at 100% 100%);
 }
 
 .card:hover .descriptions {
-    left: 0px;
-    transition: all .7s ease-in-out;
-    clip-path: circle(75%);
+  left: 0px;
+  transition: all 0.7s ease-in-out;
+  clip-path: circle(75%);
 }
 
 .card:hover {
-    transition: all .5s cubic-bezier(.8, .5, .2, 1.4);
-    box-shadow: 0px 2px 3px rgba(0, 0, 0, .3);
-    transform: scale(.97);
+  transition: all 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+  transform: scale(0.97);
 }
 
 .card:hover img {
-    transition: all .5s cubic-bezier(.8, .5, .2, 1.4);
-    transform: scale(1.6) rotate(20deg);
-    filter: blur(3px);
+  transition: all 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+  transform: scale(1.6) rotate(20deg);
+  filter: blur(3px);
 }
 
 .card h1 {
-    color: rgb(23, 23, 184);
-    letter-spacing: 1px;
-    margin: 0px;
+  color: rgb(23, 23, 184);
+  letter-spacing: 1px;
+  margin: 0px;
 }
 
 .card p {
-    line-height: 24px;
-    height: 70%;
+  line-height: 24px;
+  height: 70%;
 }
 
 .card button {
-    width: fit-content;
-    height: 40px;
-    cursor: pointer;
-    border-style: none;
-    background-color: rgb(9, 9, 116);
-    color: rgb(180, 239, 255);
-    font-size: 15px;
-    outline: none;
-    box-shadow: 0px 2px 3px rgba(0, 0, 0, .4);
-    transition: all .5s ease-in-out;
+  width: fit-content;
+  height: 40px;
+  cursor: pointer;
+  border-style: none;
+  background-color: rgb(9, 9, 116);
+  color: rgb(180, 239, 255);
+  font-size: 15px;
+  outline: none;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4);
+  transition: all 0.5s ease-in-out;
 }
 
 .card button:hover {
-    transform: scale(.95) translateX(-5px);
-    transition: all .5s ease-in-out;
+  transform: scale(0.95) translateX(-5px);
+  transition: all 0.5s ease-in-out;
 }
 
-
-
-
-
-.youtubeBtn {
-    position: fixed;
-    left: 50%;
-    transform: translatex(-50%);
-    bottom: 45px;
-    cursor: pointer;
-    transition: all .3s;
-    vertical-align: middle;
-    text-align: center;
-    display: inline-block;
+.niceButton {
+  position: fixed;
+  left: 50%;
+  transform: translatex(-50%);
+  bottom: 45px;
+  cursor: pointer;
+  transition: all 0.3s;
+  vertical-align: middle;
+  text-align: center;
+  display: inline-block;
 }
 
-.youtubeBtn i {
-    font-size: 20px;
-    float: left;
+.niceButton i {
+  font-size: 20px;
+  float: left;
 }
 
-.youtubeBtn a {
-    color: #ff0000;
-    text-shadow: 0px 2px 5px rgba(0, 0, 0, .5);
-    animation: youtubeAnim 1000ms linear infinite;
-    float: right;
+.niceButton i:active {
+  transform: scale(0.9);
+  transition: all 0.3s ease-in-out;
 }
 
-.youtubeBtn a:hover {
-    color: #c9110f;
-    transition: all .3s ease-in-out;
-    text-shadow: none;
-}
-
-.youtubeBtn i:active {
-    transform: scale(.9);
-    transition: all .3s ease-in-out;
-}
-
-.youtubeBtn span {
-    font-family: 'Lato';
-    font-weight: bold;
-    color: #fff;
-    display: block;
-    font-size: 12px;
-    float: right;
-    line-height: 20px;
-    padding-left: 5px;
-
+.niceButton span {
+  font-family: "Lato";
+  font-weight: bold;
+  color: #fff;
+  display: block;
+  font-size: 12px;
+  float: right;
+  line-height: 20px;
+  padding-left: 5px;
 }
 
 @keyframes youtubeAnim {
+  0%,
+  100% {
+    color: #c9110f;
+  }
 
-    0%,
-    100% {
-        color: #c9110f;
-    }
-
-    50% {
-        color: #ff0000;
-    }
+  50% {
+    color: #ff0000;
+  }
 }
 
 /* footer  */
 
 .colorcito {
-    background: rgb(2, 0, 36);
-    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 43%, rgba(0, 212, 255, 1) 98%);
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 43%,
+    rgba(0, 212, 255, 1) 98%
+  );
 }
 
 .whiteText {
-    color: white;
+  color: white;
 }
 
 .slider {
-    width: 100%;
-    height: 448px;
-    display: flex;
-    background-repeat: no-repeat;
-    flex-direction: row;
-    overflow-x: auto;
+  width: 100%;
+  height: 448px;
+  display: flex;
+  background-repeat: no-repeat;
+  flex-direction: row;
+  overflow-x: auto;
 }
 
 .slide {
-    width: 300px;
-    flex-shrink: 0;
-    height: 100%;
+  width: 300px;
+  flex-shrink: 0;
+  height: 100%;
 }
 
 .fixed {
-    position: fixed;
+  position: fixed;
 }
 
 /*
@@ -301,65 +280,130 @@ ESTOS SON LOS STYLES DE LA SCROLLBAR QUE NO SE BIEN COMO PONERSELOS PORQUE NO ES
 
 /*OPTIONS CSS*/
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 #app {
-    width: 350px;
-    height: 350px;
-    display: grid;
-    place-items: center;
+  width: 350px;
+  height: 350px;
+  display: grid;
+  place-items: center;
 }
 #app ul {
-    position: relative;
-    width: 350px;
-    height: 50px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    border-radius: 35px;
-    background: rgba(255, 255, 255, 0.65);
-    box-shadow: 0 12.5px 10px rgba(0, 0, 0, 0.08), 0 100px 80px rgba(0, 0, 0, 0.03);
-    overflow: hidden;
+  position: relative;
+  width: 350px;
+  height: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-radius: 35px;
+  background: rgba(255, 255, 255, 0.65);
+  box-shadow: 0 12.5px 10px rgba(0, 0, 0, 0.08),
+    0 100px 80px rgba(0, 0, 0, 0.03);
+  overflow: hidden;
 }
 #app ul li {
-    list-style: none;
-    display: grid;
-    place-items: center;
-    font-family: "montserrat";
-    color: #1355f6;
-    z-index: 10;
-    cursor: pointer;
+  list-style: none;
+  display: grid;
+  place-items: center;
+  font-family: "montserrat";
+  color: #1355f6;
+  z-index: 10;
+  cursor: pointer;
 }
 #app ul .focus-el {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: calc(100% / 3);
-    height: 100%;
-    border-radius: 35px;
-    background: #fff;
-    box-shadow: 0 12.5px 10px rgba(0, 0, 0, 0.015), 0 100px 80px rgba(0, 0, 0, 0.03);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: calc(100% / 3);
+  height: 100%;
+  border-radius: 35px;
+  background: #fff;
+  box-shadow: 0 12.5px 10px rgba(0, 0, 0, 0.015),
+    0 100px 80px rgba(0, 0, 0, 0.03);
 }
 #app ul .focus-el.el--2 {
-    left: calc(-100% / 3);
+  left: calc(-100% / 3);
 }
 .support {
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
-    padding: 10px;
-    display: flex;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  padding: 10px;
+  display: flex;
 }
 .support a {
-    margin: 0 10px;
-    color: #e1f2fb;
-    font-size: 1.8rem;
-    backface-visibility: hidden;
-    transition: all 350ms cubic-bezier(0.38, -0.12, 0.24, 1.91);
+  margin: 0 10px;
+  color: #e1f2fb;
+  font-size: 1.8rem;
+  backface-visibility: hidden;
+  transition: all 350ms cubic-bezier(0.38, -0.12, 0.24, 1.91);
 }
 .support a:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 /**/
+
+.niceButton {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.niceTitle {
+    text-align: left;
+    margin-bottom: 5px;
+
+  font-family: Helvetica, Arial;
+  font-weight: bold;
+  background: linear-gradient(270deg, #1a4dac, #03377a, #2f87b9);
+  background-size: 600% 600%;
+  -webkit-animation: AnimationName 5s ease infinite;
+  -moz-animation: AnimationName 5s ease infinite;
+  animation: AnimationName 5s ease infinite;
+  font-size: 3em;
+  line-height: 0.8em;
+  display: inline-block;
+  text-decoration: underline;
+  margin: 0 0 20px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

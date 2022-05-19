@@ -15,9 +15,9 @@ function App() {
       <Navbar />
       <Header />
       <Options />
-      <Slider title="Mas Buscadas" movies={Movies.most_searched.results}/>
+      <Slider title="Más Buscadas" movies={Movies.most_searched.results} />
       <Slider title="Mejor rateadas" movies={Movies.top_rated.results}/>
-      <Slider title="Upcuming" movies={Movies.upcoming.results}/>
+      <Slider title="Upcoming" movies={Movies.upcoming.results}/>
 
     </div>
   );
