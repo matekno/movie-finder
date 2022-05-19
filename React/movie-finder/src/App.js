@@ -18,7 +18,6 @@ function App() {
       <Slider title="Más Buscadas" movies={Movies.most_searched.results} />
       <Slider title="Mejor rateadas" movies={Movies.top_rated.results}/>
       <Slider title="Upcoming" movies={Movies.upcoming.results}/>
-
     </div>
   );
 }
