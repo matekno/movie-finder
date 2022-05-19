@@ -195,6 +195,8 @@ body {
   vertical-align: middle;
   text-align: center;
   display: inline-block;
+  background: linear-gradient(90deg, rgb(40, 149, 221) 0%, rgba(9,9,121,1) 64%);
+
 }
 
 .niceButton i {
@@ -416,11 +418,11 @@ ESTOS SON LOS STYLES DE LA SCROLLBAR QUE NO SE BIEN COMO PONERSELOS PORQUE NO ES
 
   font-family: Helvetica, Arial;
   font-weight: bold;
-  background: linear-gradient(270deg, #1a4dac, #03377a, #2f87b9);
+  background: linear-gradient(to right, #1F31CF 0%, #3D91FF 50%, #56C2F0 82%);
   background-size: 600% 600%;
-  -webkit-animation: AnimationName 5s ease infinite;
-  -moz-animation: AnimationName 5s ease infinite;
-  animation: AnimationName 5s ease infinite;
+  -webkit-animation: AnimationName 3s ease infinite;
+  -moz-animation: AnimationName 3s ease infinite;
+  animation: AnimationName 3s ease infinite;
   font-size: 3em;
   line-height: 0.8em;
   display: inline-block;

@@ -7,7 +7,7 @@ const Header = () => {
                 <div className="mb-5 mt-5 col-6 justify-content-md-center">
                     <h1 className="row mb-4 justify-content-md-center whiteText">Explora miles de pelis y series!</h1>
                     <div className="search-container">
-                        <input type="text" name="search" placeholder="Search..." className="search-input" />
+                        <input type="text" name="search" placeholder="Buscar..." className="search-input" />
                             <a href="#" className="search-btn">
                                 <i className="fas fa-search"></i>
                             </a>
