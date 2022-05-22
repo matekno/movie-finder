@@ -483,3 +483,145 @@ ESTOS SON LOS STYLES DE LA SCROLLBAR QUE NO SE BIEN COMO PONERSELOS PORQUE NO ES
 .tit {
   margin-bottom: 20px;
 }
+
+/*OPTIONS*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+#options {
+  width: 350px;
+  height: 5px;
+  display: grid;
+  margin-left:50px;
+  margin-top:40px;
+}
+#options ul {
+  position: relative;
+  width: 350px;
+  height: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-radius: 35px;
+  background: rgba(255, 255, 255, 0.65);
+  box-shadow: 0 12.5px 10px rgba(0, 0, 0, 0.08), 0 100px 80px rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+}
+#options ul li {
+  list-style: none;
+  display: grid;
+  align-items: center;
+  font-family: "montserrat";
+  color: #1355f6;
+  z-index: 10;
+  cursor: pointer;
+}
+#options ul .focus-el {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: calc(100% / 3);
+  height: 100%;
+  border-radius: 35px;
+  background: #fff;
+  box-shadow: 0 12.5px 10px rgba(0, 0, 0, 0.015), 0 100px 80px rgba(0, 0, 0, 0.03);
+}
+#options ul .focus-el.el--2 {
+  left: calc(-100% / 3);
+}
+.support {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  padding: 10px;
+  display: flex;
+}
+.support a {
+  margin: 0 10px;
+  color: #e1f2fb;
+  font-size: 1.8rem;
+  backface-visibility: hidden;
+  transition: all 350ms cubic-bezier(0.38, -0.12, 0.24, 1.91);
+}
+.support a:hover {
+  transform: scale(1.1);
+}
+/*END OPTIONS*/
+
+.coloredText{
+  color: #1644ba;
+}
+
+/*hovered icons*/
+body .crd {
+  position: relative;
+  box-shadow: 0 0 2rem -1rem rgba(0, 0, 0, 0.05);
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  column-gap: 5rem;
+}
+body .crd .multi-button {
+  z-index: 0;
+  position: absolute;
+  top: 6.25rem;
+  left: 1.25rem;
+  border-radius: 100%;
+  width: 0rem;
+  height: 0rem;
+  transform: translate(-50%, -50%);
+  transition: 0.25s cubic-bezier(0.25, 0, 0, 1);
+}
+body .crd .multi-button button {
+  display: grid;
+  align-items: center;
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: 100%;
+  background: linear-gradient(90deg, rgb(40, 149, 221) 0%, rgb(39, 39, 203) 64%);
+  color: white;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  transition: 0.25s cubic-bezier(0.25, 0, 0, 1);
+  box-shadow: 0 0 0rem -0.25rem #5d9cec;
+}
+body .crd .multi-button button:hover {
+  background: white;
+  color:rgb(39, 39, 203);
+  box-shadow: 0 0 1rem -0.25rem #5d9cec;
+}
+body .crd .multi-button button:first-child:nth-last-child(1) {
+  left: 25%;
+  top: 25%;
+}
+body .crd .multi-button button:first-child:nth-last-child(2):nth-child(1), body .crd .multi-button button:first-child:nth-last-child(2) ~ *:nth-child(1) {
+  left: 18.75%;
+  top: 13%;
+}
+body .crd .multi-button button:first-child:nth-last-child(2):nth-child(2), body .crd .multi-button button:first-child:nth-last-child(2) ~ *:nth-child(2) {
+  left: 18.75%;
+  top: 37.5%;
+}
+
+body .crd .container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  background: linear-gradient(90deg, rgb(40, 149, 221) 0%, rgb(39, 39, 203) 64%);
+  color: white;
+}
+body .crd:hover .multi-button, body .crd .multi-button:focus-within {
+  width: 10rem;
+  height: 10rem;
+}
+
+
+/*end hovered icons*/

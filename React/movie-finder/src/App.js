@@ -5,6 +5,8 @@ import './components/global.css';
 import Movies from './peliculas.json'
 import Slider from './components/Slider';
 import Options from './components/Options';
+import Footer from './components/Footer';
+
 
 /*FUNCTIONAL EXAMPLE: https://codepen.io/sreeharshrajan/pen/abywYRj*/
 
@@ -16,8 +18,11 @@ function App() {
       <Header />
       <Options />
       <Slider title="Más Buscadas" movies={Movies.most_searched.results} />
-      <Slider title="Mejor rateadas" movies={Movies.top_rated.results}/>
-      <Slider title="Upcoming" movies={Movies.upcoming.results}/>
+      <Options />
+      <Slider title="Más rateadas" movies={Movies.top_rated.results}/>
+      <Options />
+      <Slider title="Proximamente" movies={Movies.upcoming.results}/>
+      <Footer />
     </div>
   );
 }
