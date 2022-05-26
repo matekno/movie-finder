@@ -484,7 +484,7 @@ ESTOS SON LOS STYLES DE LA SCROLLBAR QUE NO SE BIEN COMO PONERSELOS PORQUE NO ES
   margin-bottom: 20px;
 }
 
-/*OPTIONS*/
+/*OPTIONS
 * {
   box-sizing: border-box;
   margin: 0;
@@ -553,6 +553,26 @@ body {
 .support a:hover {
   transform: scale(1.1);
 }
+END OPTIONS*/
+
+/*OPTIONS*/
+.customButton {
+  width: 150px;
+  height: 50px;
+  letter-spacing: 0.5px;
+  background-color: #E0314B;
+  color: white;
+  font-size: 32px;
+  border: 1.5px solid #E0314B;
+  border-radius: 5px;
+  cursor: pointer;
+  }
+
+.active{
+  background-color: rgb(25, 26, 24);
+  border: 1.5px solid rgb(25, 26, 24);
+  }
+
 /*END OPTIONS*/
 
 .coloredText{
