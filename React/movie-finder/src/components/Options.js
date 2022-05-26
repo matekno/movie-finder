@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./global.css";
+import "./options.css";
 
 
 const Options = ({ buttons, doSomethingAfterClick }) => {
@@ -12,7 +13,8 @@ const Options = ({ buttons, doSomethingAfterClick }) => {
 
 	return (
 		<>
-			{buttons.map((buttonLabel, i) => (
+		<div id="crd">
+						{buttons.map((buttonLabel, i) => (
 				<button
 					key={i}
 					name={buttonLabel}
@@ -22,6 +24,8 @@ const Options = ({ buttons, doSomethingAfterClick }) => {
 					{buttonLabel}
 				</button>
 			))}
+		</div>
+
 		</>
 	);
 };
