@@ -2,9 +2,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Header from './components/Header';
 import './components/global.css';
-import Movies from './peliculas.json'
 import Slider from './components/Slider';
-import Options from './components/Options';
 import Footer from './components/Footer';
 
 import { getMovies, getTopMovies, getUpcomingMovies } from './helpers/fetchMovies';
@@ -45,7 +43,6 @@ function App() {
     <div className="App">
       <Navbar />
       <Header />
-      <Options buttons={["Streaming", "En TV", "Alquiler"]} />
       {
         popMov &&
         <Slider title="Más Buscadas" movies={popMov.results} />
@@ -54,13 +51,10 @@ function App() {
         topMov &&
         <Slider title="Mejor Valoradas" movies={topMov.results} />
       }
-            <Options buttons={["Streaming", "En TV", "Alquiler"]}  />
-
       {
         upcomingMov &&
         <Slider title="Próximamente" movies={upcomingMov.results} />
       }
-      <Options buttons={["Streaming", "En TV", "Alquiler"]}  />
       <Footer />
     </div>
   );
