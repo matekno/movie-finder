@@ -43,6 +43,7 @@ function App() {
     <div className="App">
       <Navbar />
       <Header />
+      <Languages/>
       {
         popMov &&
         <Slider title="Más Buscadas" movies={popMov.results} />
