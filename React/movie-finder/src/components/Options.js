@@ -20,8 +20,7 @@ const Options = ({ buttons, doSomethingAfterClick }) => {
 					name={buttonLabel}
 					className="niceButton"
 					onClick={(event) => handleClick(event, i)}
-					className={i === clickedId ? "customButton active" : "customButton"}
-				>
+					className={i === clickedId ? "customButton active" : "customButton"}>
 					{buttonLabel}
 				</button>
 			))}

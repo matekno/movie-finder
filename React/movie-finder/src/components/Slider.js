@@ -7,7 +7,7 @@ import Options from './Options'
 const Slider = ( {title, movies}  ) => {
     return ( 
         <div className="ml-5 sl">
-            <Options buttons={["Streaming", "En TV", "Carteleras"]}/>
+            <Options buttons={["Acción", "Aventura", "Drama"]}/>
             <h1 className="niceTitle">{title}</h1>
             <div className="slider mb-4 ml-4 ml-5 mt-3">
                 {movies.map((card) =>{
