@@ -18,6 +18,7 @@ const Options = ({ buttons, doSomethingAfterClick }) => {
 				<button
 					key={i}
 					name={buttonLabel}
+					className="niceButton"
 					onClick={(event) => handleClick(event, i)}
 					className={i === clickedId ? "customButton active" : "customButton"}
 				>

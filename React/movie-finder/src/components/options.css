@@ -1,48 +1,72 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 body {
-    width: 100%;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
 #crd {
-    width: 350px;
-    height: 350px;
-    place-items: center;
+  width: 500px;
+  height: 0px;
+  margin-top: 30px;
+  place-items: center;
+  position: relative;
 }
-#crd ul {
-    width: 350px;
-    height: 50px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    border-radius: 35px;
-    background: rgba(255, 255, 255, 0.65);
-    box-shadow: 0 12.5px 10px rgba(0, 0, 0, 0.08), 0 100px 80px rgba(0, 0, 0, 0.03);
-    overflow: hidden;
+
+.customButton {
+  left: 35%;
+  bottom: 45px;
+  cursor: pointer;
+  transition: all 0.3s;
+  vertical-align: middle;
+  text-align: center;
+  display: inline-block;
+
 }
-#crd ul li {
-    list-style: none;
-    display: grid;
-    place-items: center;
-    font-family: "montserrat";
-    color: #1355f6;
-    z-index: 10;
-    cursor: pointer;
+
+.customButton i {
+  font-size: 20px;
+  float: left;
 }
-#crd ul .focus-el {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: calc(100% / 3);
-    height: 100%;
-    border-radius: 35px;
-    background: #fff;
-    box-shadow: 0 12.5px 10px rgba(0, 0, 0, 0.015), 0 100px 80px rgba(0, 0, 0, 0.03);
+
+.customButton {
+  width: 100px;
+  height: 40px;
+  color: rgba(9, 9, 121, 1); 
+  font-size: 18px;
+  border-radius: 25px;
+  cursor: pointer;
+  list-style: none;
+  display: grid;
+  place-items: center;
+  float: left;
+  font-family: "Lato";
+  color: linear-gradient(
+    90deg,
+    rgb(40, 149, 221) 0%,
+    rgba(9, 9, 121, 1) 64%
+);
+  display: block;
+  line-height: 20px;
+  margin-left: 5px;
+  border-width :thin;
+  border-color: rgb(184, 184, 184);
+  background-color: #fff;
 }
-#crd ul .focus-el.el--2 {
-    left: calc(-100% / 3);
+
+.active {
+    box-shadow: 4px 3px 54px 2px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 4px 3px 54px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 3px 54px 2px rgba(0,0,0,0.75);    
+    background: linear-gradient(
+        90deg,
+        rgb(40, 149, 221) 0%,
+        rgba(9, 9, 121, 1) 64%
+    );
+    color: white;
+
 }

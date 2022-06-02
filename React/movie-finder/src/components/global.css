@@ -196,7 +196,6 @@ body {
   text-align: center;
   display: inline-block;
   background: linear-gradient(90deg, rgb(40, 149, 221) 0%, rgba(9,9,121,1) 64%);
-
 }
 
 .niceButton i {
@@ -411,11 +410,12 @@ ESTOS SON LOS STYLES DE LA SCROLLBAR QUE NO SE BIEN COMO PONERSELOS PORQUE NO ES
 }
 
 .niceTitle {
-  text-align: left;
-  justify-content: left;
-  align-items: left;
+  margin-bottom: 20px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 5px;
-
+  margin-right: 300px;
   font-family: Helvetica, Arial;
   font-weight: bold;
   background: linear-gradient(to right, #1F31CF 0%, #3D91FF 50%, #56C2F0 82%);
@@ -423,11 +423,10 @@ ESTOS SON LOS STYLES DE LA SCROLLBAR QUE NO SE BIEN COMO PONERSELOS PORQUE NO ES
   -webkit-animation: AnimationName 3s ease infinite;
   -moz-animation: AnimationName 3s ease infinite;
   animation: AnimationName 3s ease infinite;
-  font-size: 3em;
+  font-size: 2.6em;
   line-height: 0.8em;
   display: inline-block;
   text-decoration: underline;
-  margin: 0 0 20px;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -480,9 +479,6 @@ ESTOS SON LOS STYLES DE LA SCROLLBAR QUE NO SE BIEN COMO PONERSELOS PORQUE NO ES
   margin-right: 10px;
 }
 
-.tit {
-  margin-bottom: 20px;
-}
 
 /*OPTIONS
 * {
@@ -556,22 +552,6 @@ body {
 END OPTIONS*/
 
 /*OPTIONS*/
-.customButton {
-  width: 150px;
-  height: 50px;
-  letter-spacing: 0.5px;
-  background-color: #E0314B;
-  color: white;
-  font-size: 32px;
-  border: 1.5px solid #E0314B;
-  border-radius: 5px;
-  cursor: pointer;
-  }
-
-.active{
-  background-color: rgb(25, 26, 24);
-  border: 1.5px solid rgb(25, 26, 24);
-  }
 
 /*END OPTIONS*/
 
