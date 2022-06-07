@@ -15,20 +15,13 @@ import React, {useState, useEffect} from 'react';
 
 function App() {
   const [popMov, setPopMov] = useState(null);
-  const [actionMov, setActionMov] = useState(null);
-  const [comedyMov, setComedyMov] = useState(null);
-  const [dramaMov, setDramaMov] = useState(null);
+  const [popActive, setPopActive] = useState(28);
 
   const [topMov, setTopMov] = useState(null);
-  const [topActionMov, setTopActionMov] = useState(null);
-  const [topComedyMov, setTopComedyMov] = useState(null);
-  const [topDramaMov, setTopDramaMov] = useState(null);
+  const [topActive, setTopActive] = useState(-1);
 
   const [upcomingMov, setUpcomingMov] = useState(null);
-  const [upcomingActionMov, setUpcomingActionMov] = useState(null);
-  const [upcomingComedyMov, setUpcomingComedyMov] = useState(null);
-  const [upcomingDramaMov, setUpcomingDramaMov] = useState(null);
-
+  const [upcomingActive, setUpcomingActive] = useState(-1);
 
   useEffect(()=>{
     (async ()=>{
@@ -36,24 +29,14 @@ function App() {
       setPopMov(movies);
     })();
   }, []);
+
   useEffect(()=>{
     (async ()=>{
-      const movies = await getActionMovies();
-      setActionMov(movies);
+      const movies = await getMovies();
+      setPopMov(movies);
     })();
   }, []);
-  useEffect(()=>{
-    (async ()=>{
-      const movies = await getComedyMovies();
-      setComedyMov(movies);
-    })();
-  }, []);
-  useEffect(()=>{
-    (async ()=>{
-      const movies = await getDramaMovies();
-      setDramaMov(movies);
-    })();
-  }, []);
+
 
   useEffect(()=>{
     (async ()=>{
@@ -61,24 +44,7 @@ function App() {
       setTopMov(movies);
     })();
   }, []); 
-  useEffect(()=>{
-    (async ()=>{
-      const movies = await getTopActionMovies();
-      setTopActionMov(movies);
-    })();
-  }, []); 
-  useEffect(()=>{
-    (async ()=>{
-      const movies = await getTopComedyMovies();
-      setTopComedyMov(movies);
-    })();
-  }, []); 
-  useEffect(()=>{
-    (async ()=>{
-      const movies = await getTopDramaMovies();
-      setTopDramaMov(movies);
-    })();
-  }, []); 
+
 
   useEffect(()=>{
     (async ()=>{
@@ -86,40 +52,23 @@ function App() {
       setUpcomingMov(movies);
     })();
   }, []);
-  useEffect(()=>{
-    (async ()=>{
-      const movies = await getUpcomingActionMovies();
-      setUpcomingActionMov(movies);
-    })();
-  }, []);
-  useEffect(()=>{
-    (async ()=>{
-      const movies = await getUpcomingComedyMovies();
-      setUpcomingComedyeMov(movies);
-    })();
-  }, []);
-  useEffect(()=>{
-    (async ()=>{
-      const movies = await getUpcomingDramaMovies();
-      setUpcomingDramaMov(movies);
-    })();
-  }, []);
 
+//aca nomas hago un usestate con cada filtro activo para cada slider 
   return (
     <div className="App">
       <Navbar />
       <Header />
       {
         popMov &&
-        <Slider title="Más Buscadas" movies={popMov.results} />
+        <Slider title="Más Buscadas" movies={popMov.results} setActive={setPopActive} /> //aca le paso su usestate con el settaste
       }
       {
         topMov &&
-        <Slider title="Mejor Valoradas" movies={topMov.results} />
+        <Slider title="Mejor Valoradas" movies={topMov.results} setActive={setTopActive}/>
       }
       {
         upcomingMov &&
-        <Slider title="Próximamente" movies={upcomingMov.results} />
+        <Slider title="Próximamente" movies={upcomingMov.results} setActive={setUpcomingActive}/>
       }
       <Footer />
     </div>

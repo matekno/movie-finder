@@ -187,9 +187,6 @@ body {
 }
 
 .niceButton {
-  position: fixed;
-  left: 35%;
-  bottom: 45px;
   cursor: pointer;
   transition: all 0.3s;
   vertical-align: middle;
