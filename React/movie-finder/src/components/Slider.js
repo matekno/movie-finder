@@ -8,7 +8,7 @@ const Slider = ( {title, movies, setActive}  ) => {
 
     return ( 
         <div className="ml-5 sl">
-            <Options buttons={[{name: "Acción", genre: 28}, {name: "Aventura", genre: 35}, {name: "Drama", genre: 18}]} setActive={setActive}/>
+            <Options buttons={[{name: "Acción", genre: 28}, {name: "Comedia", genre: 35}, {name: "Drama", genre: 18}]} setActive={setActive}/>
             <h1 className="niceTitle">{title}</h1>
             <div className="slider mb-4 ml-4 ml-5 mt-3">
                 {movies.map((card) =>{

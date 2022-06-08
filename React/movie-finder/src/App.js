@@ -5,7 +5,7 @@ import './components/global.css';
 import Slider from './components/Slider';
 import Footer from './components/Footer';
 
-import { getMovies, getActionMovies, getComedyMovies, getDramaMovies, getTopMovies, getTopActionMovies, getTopComedyMovies, getTopDramaMovies, getUpcomingMovies, getUpcomingActionMovies, getUpcomingComedyMovies, getUpcomingDramaMovies } from './helpers/fetchMovies';
+import { getMovies, getUpcomingMoviesByGenre, getMoviesByGenre, getTopMoviesByGenre, getTopMovies } from './helpers/fetchMovies';
 import React, {useState, useEffect} from 'react';
 
 
@@ -18,49 +18,50 @@ function App() {
   const [popActive, setPopActive] = useState(28);
 
   const [topMov, setTopMov] = useState(null);
-  const [topActive, setTopActive] = useState(-1);
+  const [topActive, setTopActive] = useState(28);
 
   const [upcomingMov, setUpcomingMov] = useState(null);
-  const [upcomingActive, setUpcomingActive] = useState(-1);
+  const [upcomingActive, setUpcomingActive] = useState(28);
 
   useEffect(()=>{
     (async ()=>{
-      const movies = await getMovies();
+      console.log('popActive', popMov);
+      const movies = await getMoviesByGenre(popActive);
       setPopMov(movies);
     })();
-  }, []);
+  }, [popActive]);
 
   useEffect(()=>{
     (async ()=>{
-      const movies = await getMovies();
-      setPopMov(movies);
-    })();
-  }, []);
-
-
-  useEffect(()=>{
-    (async ()=>{
-      const movies = await getTopMovies();
+      const movies = await getTopMoviesByGenre(topActive);
       setTopMov(movies);
+    })();
+  }, [topActive]);
+
+
+  useEffect(()=>{
+    (async ()=>{
+      console.log('upcomingActive', upcomingActive);
+      const movies = await getUpcomingMoviesByGenre(upcomingActive);
+      setUpcomingActive(movies);
+    })();
+  }, [upcomingActive]);
+
+  useEffect(()=>{
+    (async ()=>{
+      const topMovies = await getTopMovies();
+      setTopActive(topMovies);
+
     })();
   }, []); 
 
-
-  useEffect(()=>{
-    (async ()=>{
-      const movies = await getUpcomingMovies();
-      setUpcomingMov(movies);
-    })();
-  }, []);
-
-//aca nomas hago un usestate con cada filtro activo para cada slider 
   return (
     <div className="App">
       <Navbar />
       <Header />
       {
         popMov &&
-        <Slider title="Más Buscadas" movies={popMov.results} setActive={setPopActive} /> //aca le paso su usestate con el settaste
+        <Slider title="Más Buscadas" movies={popMov.results} setActive={setPopActive} /> 
       }
       {
         topMov &&

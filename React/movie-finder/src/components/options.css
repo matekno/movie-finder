@@ -22,24 +22,13 @@ body {
   bottom: 45px;
   cursor: pointer;
   transition: all 0.3s;
-  vertical-align: middle;
   text-align: center;
-  display: inline-block;
-
-}
-
-.customButton i {
-  font-size: 20px;
-  float: left;
-}
-
-.customButton {
+  vertical-align: middle;
+  font-size: 18px;
   width: 100px;
   height: 40px;
   color: rgba(9, 9, 121, 1); 
-  font-size: 18px;
   border-radius: 25px;
-  cursor: pointer;
   list-style: none;
   display: grid;
   place-items: center;
@@ -48,17 +37,44 @@ body {
   color: linear-gradient(
     90deg,
     rgb(40, 149, 221) 0%,
-    rgba(9, 9, 121, 1) 64%
-);
-  display: block;
+    rgba(9, 9, 121, 1) 64%);
   line-height: 20px;
   margin-left: 5px;
-  border-width :thin;
+  border-width :medium;
   border-color: rgb(184, 184, 184);
   background-color: #fff;
+
 }
 
-.active {
+.customButton span {
+  font-family: "Lato";
+  font-weight: bold;
+  color: #fff;
+  display: block;
+  font-size: 12px;
+  float: right;
+  line-height: 20px;
+  padding-left: 5px;
+}
+
+.customButton:hover{
+  background: linear-gradient(
+    90deg,
+    rgb(40, 149, 221) 0%,
+    rgba(9, 9, 121, 1) 64%
+);
+color: white;
+transform: scale(0.9);
+transition: all 0.3s ease-in-out;
+border-width :thin;
+border-color: rgb(255, 255, 255);
+
+
+
+}
+
+
+.customButton:active {
     box-shadow: 4px 3px 54px 2px rgba(0,0,0,0.75);
     -webkit-box-shadow: 4px 3px 54px 2px rgba(0,0,0,0.75);
     -moz-box-shadow: 4px 3px 54px 2px rgba(0,0,0,0.75);    
@@ -68,5 +84,10 @@ body {
         rgba(9, 9, 121, 1) 64%
     );
     color: white;
+    transform: scale(0.9);
+    transition: all 0.3s ease-in-out;
+    border-width :thin;
+    border-color: rgb(255, 255, 255);
+
 
 }

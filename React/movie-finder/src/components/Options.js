@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import "./global.css";
 import "./options.css";
 
-
-const Options = ({ buttons, setActive }) => {
+const Options = ({ buttons, setActive}) => {
 	const doSomethingAfterClick = () => {
 		console.log(clickedId);
 	}
@@ -12,6 +11,7 @@ const Options = ({ buttons, setActive }) => {
 	const handleClick = (event, genre, id) => {
 		setActive(genre)
 		setClickedId(id);
+		doSomethingAfterClick(event);
 	};
 
 	return (
@@ -22,8 +22,10 @@ const Options = ({ buttons, setActive }) => {
 						<button
 							key={buttonLabel.genre}
 							name={buttonLabel.name}
-							className={`niceButton customButton`}
-							onClick={setActive(buttonLabel.genre)}
+							className={`niceButton`}
+							onClick={(event) => handleClick(event, i)}
+							className={i === clickedId ? "customButton active" : "customButton"}
+							onClick={() => setActive(buttonLabel.genre)}
 						>
 							{buttonLabel.name}
 						</button>
