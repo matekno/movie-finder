@@ -12,6 +12,12 @@ import React, {useState, useEffect} from 'react';
 
 /*FUNCTIONAL EXAMPLE: https://codepen.io/sreeharshrajan/pen/abywYRj*/
 
+/*to do: 
+- cambiar el titulo a uno mas lindo
+- cambiar los nombres y ids de los generos bien
+- poner dos sliders mas
+- hacer que onclick el boton se ponga lindo
+- hacer que por default este activo en accion o bien poner un boton que diga todos los generos*/
 
 function App() {
   const [popMov, setPopMov] = useState(null);
