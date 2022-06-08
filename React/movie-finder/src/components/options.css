@@ -41,36 +41,21 @@ body {
   line-height: 20px;
   margin-left: 5px;
   border-width :medium;
-  border-color: rgb(184, 184, 184);
+  border-color: rgb(44, 44, 167);
   background-color: #fff;
 
-}
-
-.customButton span {
-  font-family: "Lato";
-  font-weight: bold;
-  color: #fff;
-  display: block;
-  font-size: 12px;
-  float: right;
-  line-height: 20px;
-  padding-left: 5px;
 }
 
 .customButton:hover{
   background: linear-gradient(
     90deg,
     rgb(40, 149, 221) 0%,
-    rgba(9, 9, 121, 1) 64%
-);
+    rgba(9, 9, 121, 1) 64%);
 color: white;
 transform: scale(0.9);
 transition: all 0.3s ease-in-out;
 border-width :thin;
 border-color: rgb(255, 255, 255);
-
-
-
 }
 
 

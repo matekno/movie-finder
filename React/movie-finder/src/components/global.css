@@ -7,6 +7,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .search-container {
   background: #fff;
   height: 30px;
@@ -23,7 +24,7 @@ body {
     inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
 }
 
-.search-container:hover > .search-input {
+.search-container:hover>.search-input {
   width: 400px;
 }
 
@@ -192,12 +193,10 @@ body {
 
 .colorcito {
   background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(9, 9, 121, 1) 43%,
-    rgba(0, 212, 255, 1) 98%
-  );
+  background: linear-gradient(90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(9, 9, 121, 1) 43%,
+      rgba(0, 212, 255, 1) 98%);
 }
 
 .whiteText {
@@ -226,11 +225,11 @@ body {
 }
 
 .slider::-webkit-scrollbar {
-    height: 8px;
-    margin-left: 30px;
-    float: left;
-    background: #F5F5F5;
-    overflow-y: scroll;
+  height: 8px;
+  margin-left: 30px;
+  float: left;
+  background: #F5F5F5;
+  overflow-y: scroll;
 }
 
 /* Ponemos un color de fondo y redondeamos las esquinas del thumb */
@@ -239,26 +238,24 @@ body {
   border-radius: 4px;
   margin-bottom: 4rem;
   width: 10px;
-	background-image: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(9,9,121,1) 45%, rgba(2,0,36,1) 79%);
+  background-image: linear-gradient(90deg, rgba(0, 212, 255, 1) 0%, rgba(9, 9, 121, 1) 45%, rgba(2, 0, 36, 1) 79%);
 }
 
-#styleScrollbar::-webkit-scrollbar
-{
-	width: 10px;
-	background-color: #F5F5F5;
+#styleScrollbar::-webkit-scrollbar {
+  width: 10px;
+  background-color: #F5F5F5;
 }
 
 .slider::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
--webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-background-color: #F5F5F5;
-border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5;
+  border-radius: 10px;
 }
 
-#styleScrollbar::-webkit-scrollbar-track
-{
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	border-radius: 10px;
+#styleScrollbar::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
 }
 
 /* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
@@ -266,7 +263,7 @@ border-radius: 10px;
   background: #b3b3b3;
   box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-	background-image: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(9,9,121,1) 45%, rgba(2,0,36,1) 79%);
+  background-image: linear-gradient(90deg, rgba(0, 212, 255, 1) 0%, rgba(9, 9, 121, 1) 45%, rgba(2, 0, 36, 1) 79%);
 
 }
 
@@ -274,15 +271,14 @@ border-radius: 10px;
 .slider::-webkit-scrollbar-thumb:active {
   background-color: #999999;
   border-radius: 10px;
-	background-image: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(9,9,121,1) 45%, rgba(2,0,36,1) 79%);
+  background-image: linear-gradient(90deg, rgba(0, 212, 255, 1) 0%, rgba(9, 9, 121, 1) 45%, rgba(2, 0, 36, 1) 79%);
 
 }
 
 
-#styleScrollbar::-webkit-scrollbar-thumb
-{
-	border-radius: 10px;
-	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.44, rgb(122,153,217)), color-stop(0.72, rgb(73,125,189)), color-stop(0.86, rgb(28,58,148)));
+#styleScrollbar::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.44, rgb(122, 153, 217)), color-stop(0.72, rgb(73, 125, 189)), color-stop(0.86, rgb(28, 58, 148)));
 }
 
 /*
@@ -319,6 +315,7 @@ ESTOS SON LOS STYLES DE LA SCROLLBAR QUE NO SE BIEN COMO PONERSELOS PORQUE NO ES
   display: grid;
   place-items: center;
 }
+
 #app ul {
   position: relative;
   width: 350px;
@@ -331,6 +328,7 @@ ESTOS SON LOS STYLES DE LA SCROLLBAR QUE NO SE BIEN COMO PONERSELOS PORQUE NO ES
     0 100px 80px rgba(0, 0, 0, 0.03);
   overflow: hidden;
 }
+
 #app ul li {
   list-style: none;
   display: grid;
@@ -340,6 +338,7 @@ ESTOS SON LOS STYLES DE LA SCROLLBAR QUE NO SE BIEN COMO PONERSELOS PORQUE NO ES
   z-index: 10;
   cursor: pointer;
 }
+
 #app ul .focus-el {
   position: absolute;
   left: 0;
@@ -351,9 +350,11 @@ ESTOS SON LOS STYLES DE LA SCROLLBAR QUE NO SE BIEN COMO PONERSELOS PORQUE NO ES
   box-shadow: 0 12.5px 10px rgba(0, 0, 0, 0.015),
     0 100px 80px rgba(0, 0, 0, 0.03);
 }
+
 #app ul .focus-el.el--2 {
   left: calc(-100% / 3);
 }
+
 .support {
   position: absolute;
   right: 10px;
@@ -361,6 +362,7 @@ ESTOS SON LOS STYLES DE LA SCROLLBAR QUE NO SE BIEN COMO PONERSELOS PORQUE NO ES
   padding: 10px;
   display: flex;
 }
+
 .support a {
   margin: 0 10px;
   color: #e1f2fb;
@@ -368,9 +370,11 @@ ESTOS SON LOS STYLES DE LA SCROLLBAR QUE NO SE BIEN COMO PONERSELOS PORQUE NO ES
   backface-visibility: hidden;
   transition: all 350ms cubic-bezier(0.38, -0.12, 0.24, 1.91);
 }
+
 .support a:hover {
   transform: scale(1.1);
 }
+
 /**/
 
 .niceButton {
@@ -399,15 +403,26 @@ ESTOS SON LOS STYLES DE LA SCROLLBAR QUE NO SE BIEN COMO PONERSELOS PORQUE NO ES
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all .2s;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.niceTitle:hover {
+  background-image: linear-gradient(43deg, #bc70ff 0%, #C850C0 46%, #4158D0 100%);
 }
 
 @-webkit-keyframes AnimationName {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -417,9 +432,11 @@ ESTOS SON LOS STYLES DE LA SCROLLBAR QUE NO SE BIEN COMO PONERSELOS PORQUE NO ES
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -429,9 +446,11 @@ ESTOS SON LOS STYLES DE LA SCROLLBAR QUE NO SE BIEN COMO PONERSELOS PORQUE NO ES
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -446,7 +465,7 @@ ESTOS SON LOS STYLES DE LA SCROLLBAR QUE NO SE BIEN COMO PONERSELOS PORQUE NO ES
   margin-right: 10px;
 }
 
-.coloredText{
+.coloredText {
   color: #1644ba;
 }
 
@@ -457,6 +476,7 @@ body .crd {
   grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
   column-gap: 5rem;
 }
+
 body .crd .multi-button {
   z-index: 0;
   position: absolute;
@@ -468,6 +488,7 @@ body .crd .multi-button {
   transform: translate(-50%, -50%);
   transition: 0.25s cubic-bezier(0.25, 0, 0, 1);
 }
+
 body .crd .multi-button button {
   display: grid;
   align-items: center;
@@ -483,20 +504,26 @@ body .crd .multi-button button {
   transition: 0.25s cubic-bezier(0.25, 0, 0, 1);
   box-shadow: 0 0 0rem -0.25rem #5d9cec;
 }
+
 body .crd .multi-button button:hover {
   background: white;
-  color:rgb(39, 39, 203);
+  color: rgb(39, 39, 203);
   box-shadow: 0 0 1rem -0.25rem #5d9cec;
 }
+
 body .crd .multi-button button:first-child:nth-last-child(1) {
   left: 25%;
   top: 25%;
 }
-body .crd .multi-button button:first-child:nth-last-child(2):nth-child(1), body .crd .multi-button button:first-child:nth-last-child(2) ~ *:nth-child(1) {
+
+body .crd .multi-button button:first-child:nth-last-child(2):nth-child(1),
+body .crd .multi-button button:first-child:nth-last-child(2)~*:nth-child(1) {
   left: 18.75%;
   top: 13%;
 }
-body .crd .multi-button button:first-child:nth-last-child(2):nth-child(2), body .crd .multi-button button:first-child:nth-last-child(2) ~ *:nth-child(2) {
+
+body .crd .multi-button button:first-child:nth-last-child(2):nth-child(2),
+body .crd .multi-button button:first-child:nth-last-child(2)~*:nth-child(2) {
   left: 18.75%;
   top: 37.5%;
 }
@@ -509,7 +536,9 @@ body .crd .container {
   background: linear-gradient(90deg, rgb(40, 149, 221) 0%, rgb(39, 39, 203) 64%);
   color: white;
 }
-body .crd:hover .multi-button, body .crd .multi-button:focus-within {
+
+body .crd:hover .multi-button,
+body .crd .multi-button:focus-within {
   width: 10rem;
   height: 10rem;
 }

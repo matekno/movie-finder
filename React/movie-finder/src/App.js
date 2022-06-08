@@ -4,16 +4,14 @@ import Header from './components/Header';
 import './components/global.css';
 import Slider from './components/Slider';
 import Footer from './components/Footer';
-
-import { getMovies, getUpcomingMoviesByGenre, getMoviesByGenre, getTopMoviesByGenre, getTopMovies } from './helpers/fetchMovies';
+import { getMovies, getUpcomingMovies, getUpcomingMoviesByGenre, getMoviesByGenre, getTopMoviesByGenre, getTopMovies } from './helpers/fetchMovies';
 import React, {useState, useEffect} from 'react';
-
-
 
 /*FUNCTIONAL EXAMPLE: https://codepen.io/sreeharshrajan/pen/abywYRj*/
 
-/*to do: 
-- cambiar el titulo a uno mas lindo
+/*
+
+to do: 
 - cambiar los nombres y ids de los generos bien
 - poner dos sliders mas
 - hacer que onclick el boton se ponga lindo
@@ -21,17 +19,17 @@ import React, {useState, useEffect} from 'react';
 
 function App() {
   const [popMov, setPopMov] = useState(null);
-  const [popActive, setPopActive] = useState(28);
+  const [popActive, setPopActive] = useState(null);
 
   const [topMov, setTopMov] = useState(null);
-  const [topActive, setTopActive] = useState(28);
+  const [topActive, setTopActive] = useState(null);
 
   const [upcomingMov, setUpcomingMov] = useState(null);
-  const [upcomingActive, setUpcomingActive] = useState(28);
+  const [upcomingActive, setUpcomingActive] = useState(null);
 
+  /*POP MOVIES*/
   useEffect(()=>{
     (async ()=>{
-      console.log('popActive', popMov);
       const movies = await getMoviesByGenre(popActive);
       setPopMov(movies);
     })();
@@ -39,25 +37,38 @@ function App() {
 
   useEffect(()=>{
     (async ()=>{
+      const popMovies = await getMovies();
+      setPopActive(popMovies);
+    })();
+  }, []); 
+
+  /*TOP MOVIES*/
+  useEffect(()=>{
+    (async ()=>{
       const movies = await getTopMoviesByGenre(topActive);
       setTopMov(movies);
     })();
   }, [topActive]);
 
-
-  useEffect(()=>{
-    (async ()=>{
-      console.log('upcomingActive', upcomingActive);
-      const movies = await getUpcomingMoviesByGenre(upcomingActive);
-      setUpcomingActive(movies);
-    })();
-  }, [upcomingActive]);
-
   useEffect(()=>{
     (async ()=>{
       const topMovies = await getTopMovies();
       setTopActive(topMovies);
+    })();
+  }, []); 
 
+  /*UPCOMING MOVIES*/
+  useEffect(()=>{
+    (async ()=>{
+      const movies = await getUpcomingMoviesByGenre(upcomingActive);
+      setUpcomingMov(movies);
+    })();
+  }, [upcomingActive]);
+  
+  useEffect(()=>{
+    (async ()=>{
+      const upcomingMov = await getUpcomingMovies();
+      setUpcomingActive(upcomingMov);
     })();
   }, []); 
 

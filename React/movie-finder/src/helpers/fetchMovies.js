@@ -30,13 +30,3 @@ export const getUpcomingMoviesByGenre = async (genre) =>{
     const res = await axios.get(`https://api.themoviedb.org/3/movie/upcoming?api_key=13d84b90cb476a717b73b72950066c86&with_genres=${genre}`);
     return res.data;
 } 
-
-
-
-
-/*
-export const getSpanishTopMovies = async () =>{
-    const res = await axios.get("https://api.themoviedb.org/3/movie/top_rated?api_key=13d84b90cb476a717b73b72950066c86&language=es-US&page=1");
-    return res.data;
-}
-*/

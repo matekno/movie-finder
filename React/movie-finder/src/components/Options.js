@@ -6,7 +6,7 @@ const Options = ({ buttons, setActive}) => {
 	const doSomethingAfterClick = () => {
 		console.log(clickedId);
 	}
-	const [clickedId, setClickedId] = useState(-1);
+	const [clickedId, setClickedId] = useState(null);
 
 	const handleClick = (event, genre, id) => {
 		setActive(genre)
@@ -24,7 +24,7 @@ const Options = ({ buttons, setActive}) => {
 							name={buttonLabel.name}
 							className={`niceButton`}
 							onClick={(event) => handleClick(event, i)}
-							className={i === clickedId ? "customButton active" : "customButton"}
+							className={i === clickedId ? "customButton" : "customButton"}
 							onClick={() => setActive(buttonLabel.genre)}
 						>
 							{buttonLabel.name}
