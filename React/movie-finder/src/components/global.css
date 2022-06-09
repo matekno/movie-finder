@@ -375,13 +375,6 @@ ESTOS SON LOS STYLES DE LA SCROLLBAR QUE NO SE BIEN COMO PONERSELOS PORQUE NO ES
   transform: scale(1.1);
 }
 
-/**/
-
-.niceButton {
-  padding-left: 6px;
-  padding-right: 6px;
-}
-
 .niceTitle {
   margin-bottom: 20px;
   text-align: center;
@@ -396,7 +389,7 @@ ESTOS SON LOS STYLES DE LA SCROLLBAR QUE NO SE BIEN COMO PONERSELOS PORQUE NO ES
   -webkit-animation: AnimationName 3s ease infinite;
   -moz-animation: AnimationName 3s ease infinite;
   animation: AnimationName 3s ease infinite;
-  font-size: 2.6em;
+  font-size: 2.0em;
   line-height: 0.8em;
   display: inline-block;
   text-decoration: underline;

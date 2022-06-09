@@ -12,9 +12,7 @@ import React, {useState, useEffect} from 'react';
 /*
 
 to do: 
-- cambiar los nombres y ids de los generos bien
 - poner dos sliders mas
-- hacer que onclick el boton se ponga lindo
 - hacer que por default este activo en accion o bien poner un boton que diga todos los generos*/
 
 function App() {
@@ -78,15 +76,15 @@ function App() {
       <Header />
       {
         popMov &&
-        <Slider title="Más Buscadas" movies={popMov.results} setActive={setPopActive} /> 
+        <Slider title="Más Buscadas" movies={popMov.results} setActive={setPopActive} active={popActive} /> 
       }
       {
         topMov &&
-        <Slider title="Mejor Valoradas" movies={topMov.results} setActive={setTopActive}/>
+        <Slider title="Mejor Valoradas" movies={topMov.results} setActive={setTopActive} active={topActive}/>
       }
       {
         upcomingMov &&
-        <Slider title="Próximamente" movies={upcomingMov.results} setActive={setUpcomingActive}/>
+        <Slider title="Próximamente" movies={upcomingMov.results} setActive={setUpcomingActive} active={upcomingActive}/>
       }
       <Footer />
     </div>
