@@ -6,6 +6,8 @@ import Slider from './components/Slider';
 import Footer from './components/Footer';
 import { getMovies, getUpcomingMovies, getUpcomingMoviesByGenre, getMoviesByGenre, getTopMoviesByGenre, getTopMovies } from './helpers/fetchMovies';
 import React, {useState, useEffect} from 'react';
+import { Outlet, Link } from "react-router-dom";
+
 
 /*FUNCTIONAL EXAMPLE: https://codepen.io/sreeharshrajan/pen/abywYRj*/
 
@@ -13,8 +15,10 @@ import React, {useState, useEffect} from 'react';
 
 to do: 
 - poner dos sliders mas
-- hacer que por default este activo en accion o bien poner un boton que diga todos los generos*/
-
+- poner un poco mas de margen en el botton de ver mas left y right
+- hacer lo de routers
+- poder buscar una peli
+*/
 function App() {
   const [popMov, setPopMov] = useState(null);
   const [popActive, setPopActive] = useState(null);

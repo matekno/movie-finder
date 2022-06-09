@@ -1,5 +1,7 @@
 import React from "react";
 import './global.css';
+import { Outlet, Link } from "react-router-dom";
+
 
 const Card = ({ movie }) => {
     return (
@@ -12,9 +14,12 @@ const Card = ({ movie }) => {
                 <div className="descriptions">
                     <h1 className="movieTitle">{movie.original_title}</h1>
                     <p className="dad">{movie.overview}</p>
-                    <button className="niceButton">
-                        Ver más
-                    </button>
+                    <Link to={`/${movie.id}`}>
+                        <button className="niceButton">
+                            Ver más
+                        </button>
+                    </Link>
+                    <Outlet />
                 </div>
             </div>
         </div>
