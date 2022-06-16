@@ -22,7 +22,11 @@ const Movie = () => {
     let backdropImage = "https://image.tmdb.org/t/p/original" + movie.backdrop_path;
     return movie && (
         <>
-            <div className='detailsPage' style={{ backgroundImage: `url(${backdropImage})` }}></div>
+            <div className='detailsPage' style={{backgroundImage: `url(${backdropImage}); background-image: linear-gradient(to right, rgba(52.5, 73.5, 73.5, 1) 150px, rgba(52.5, 73.5, 73.5, 0.84) 100%);` }}>
+                <div className="blurredBackground"></div>
+
+            </div>
+
         </>
         /*
         <div className='detailsPage' style={{ backgroundImage: `url(${backdropImage})` }}>
