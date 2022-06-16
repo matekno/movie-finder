@@ -30,3 +30,8 @@ export const getUpcomingMoviesByGenre = async (genre) =>{
     const res = await axios.get(`https://api.themoviedb.org/3/movie/upcoming?api_key=13d84b90cb476a717b73b72950066c86&with_genres=${genre}`);
     return res.data;
 } 
+
+export const getMovieByID = async (id) =>{
+    const res = await axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=13d84b90cb476a717b73b72950066c86&language=en-US`);
+    return res.data;
+}
