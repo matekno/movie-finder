@@ -9,6 +9,7 @@ import './details.css'
 
 export const Movie = ({ movie }) => {
     /*inspeccionar esta: https://tmdb-dagmawibabi.vercel.app/*/
+    
         let backdropImage = "https://image.tmdb.org/t/p/original" + movie.bgImage;
         return (
             <div className='detailsPage' style={{backgroundImage: `url(${backdropImage})`}}>
