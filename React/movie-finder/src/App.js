@@ -7,13 +7,15 @@ import Footer from './components/Footer';
 import { getMovies, getUpcomingMovies, getUpcomingMoviesByGenre, getMoviesByGenre, getTopMoviesByGenre, getTopMovies } from './helpers/fetchMovies';
 import React, {useState, useEffect} from 'react';
 
-/*FUNCTIONAL EXAMPLE: https://codepen.io/sreeharshrajan/pen/abywYRj*/
-
 /*
 
 to do: 
+- hacer que el buscador sea funcional
+- hacer la ruta a la pagina movie.js
+- hacer la pagina movie.js
 - poner dos sliders mas
-- hacer que por default este activo en accion o bien poner un boton que diga todos los generos*/
+- poner lindo el boton de ver mas (buscar clase niceButton en tps anteriores)
+*/
 
 function App() {
   const [popMov, setPopMov] = useState(null);

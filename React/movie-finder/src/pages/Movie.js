@@ -1,12 +1,16 @@
 import React from "react";
 import "./global.css";
 import "./Movie.css";
+import Navbar from './components/Navbar';
+import './Movie.css';
+import '../components/global.css';
 
-const Info = ({ movie }) => {
-    
+const Movie = ({ movie }) => {
+    /*inspeccionar esta: https://tmdb-dagmawibabi.vercel.app/*/
 
     return (
         <>
+            <Navbar />
             <div className="movie-card">
                 <div className="container">
                     <img
@@ -128,7 +132,7 @@ const Info = ({ movie }) => {
         </>
     );
 };
-export default Info;
+export default Movie;
 
 /*
 <div className="ml-5 crd">

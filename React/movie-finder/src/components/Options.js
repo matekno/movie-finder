@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./global.css";
 import "./options.css";
 
+
 const Options = ({ buttons, setActive, active}) => {
 	return (
 		<>

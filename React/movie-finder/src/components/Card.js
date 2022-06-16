@@ -1,7 +1,14 @@
 import React from "react";
 import './global.css';
+import {BrowserRouter, Routes, Route, useNavigate, useParams} from "react-router-dom";
+
 
 const Card = ({ movie }) => {
+    let navigate = useNavigate();
+    const redirigir = (url) =>{
+        navigate(url);
+    }
+
     return (
         <div className="ml-5 crd">
             <div className="multi-button">
@@ -12,7 +19,7 @@ const Card = ({ movie }) => {
                 <div className="descriptions">
                     <h1 className="movieTitle">{movie.original_title}</h1>
                     <p className="dad">{movie.overview}</p>
-                    <button className="niceButton">
+                    <button className="niceButton" onClick={()=>redirigir("movie")}>
                         Ver más
                     </button>
                 </div>
