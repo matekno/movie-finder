@@ -421,10 +421,7 @@ a[data-tooltip][data-placement="top"]::after {
     .movieLanguageD {
         font-size: 10px;
     }
-}
-
-
-.pic{
-    margin-left: 10%;
-    margin-bottom: 6%;
+    .moviePosterD {
+        display: none;
+    }
 }
