@@ -4,10 +4,73 @@ import "./Movie.css";
 import Navbar from './components/Navbar';
 import './Movie.css';
 import '../components/global.css';
+import './details.css'
 
-const Movie = ({ movie }) => {
+
+export const Movie = ({ movie }) => {
     /*inspeccionar esta: https://tmdb-dagmawibabi.vercel.app/*/
-
+        let backdropImage = "https://image.tmdb.org/t/p/original" + movie.bgImage;
+        return (
+            <div className='detailsPage' style={{backgroundImage: `url(${backdropImage})`}}>
+                <div className='banner'>
+                    <div className='details'>
+                        <div className='rateAndLangD'>
+                            <h5 className='movieReleaseDateD'> {movie.movieRD} </h5>
+                            {
+                                movie.status === 'Released' ?  
+                                    <h5 className='movieReleaseDateD' style={{color: '#00ffdd'}}> {movie.status} </h5>
+                                : 
+                                    ( movie.status === 'Post Production' ? 
+                                    <h5 className='movieReleaseDateD' style={{color: '#eeee00'}}> {movie.status} </h5> :  <h5 className='movieReleaseDateD'> {movie.status} </h5>)
+                            }
+                        </div>
+                        <h1 className='movieTitleD'> {movie.movieTitle} </h1>
+                        {
+                            movie.type === 'tv' ? "" :  <h2> {movie.tagline} </h2>
+                        }
+                    
+                        <p className='movieDescriptionD'> {movie.movieDescription} </p>
+                        <div style={{marginBottom: '30px'}}></div>
+                        <hr style={{opacity: '0.1'}}></hr>
+                        <div style={{marginBottom: '15px'}}></div>
+                        <div style={{display: 'inline-flex'}}> 
+                        {
+                           movie.type !== "tv" ? movie.movieGenres === undefined ? "" : movie.movieGenres.map((genre, index) => {
+                                return (
+                                    <div>
+    
+                                        <h4 key={index} style={{marginRight: '10px', fontWeight: 'normal', fontStyle: 'italic'}} className='movieGenreD'> {genre.name} </h4>
+                                    </div>
+                                    )
+                            }) : <div></div>
+                        }
+                        </div>
+                        {
+                            movie.type === "tv" ? 
+                                <div>
+    
+                                </div> : 
+                                <div>
+                                    <div className='rateAndLangD'>
+                                        <p className='movieDescriptionD'>  {"Runtime: " + movie.runtime + " mins"} </p>                    
+                                        <p className='movieDescriptionD'>  {"Budget: $" + movie.budget} </p>                    
+                                    </div>
+                                </div>
+                        }
+                        <div className='rateAndLangD'>
+                        <h4 className='movieRatingD'> {"Rating: " + movie.movieRating} </h4>
+                        <h4>Language: <span className='movieLanguageD'> {movie.movieLanguage} </span>  </h4>                        
+                        </div>
+                        <div style={{paddingBottom: '20px'}}></div>
+                    </div>
+                    <div>
+                        <a href={movie.homepage}> <img alt='moviePoster' className='moviePosterD' src={"https://image.tmdb.org/t/p/original" + movie.moviePoster}></img> </a>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+    /*
     return (
         <>
             <Navbar />
@@ -133,6 +196,7 @@ const Movie = ({ movie }) => {
     );
 };
 export default Movie;
+*/
 
 /*
 <div className="ml-5 crd">
