@@ -7,10 +7,6 @@
     box-sizing: border-box;
 }
 
-body {
-    background: #43423e;
-}
-
 a {
     text-decoration: none;
     color: #5c7fb8;
@@ -254,6 +250,9 @@ a[data-tooltip]:hover::after {
 
 /** positioning **/
 /* top tooltip */
+html, body {
+    height:100%;
+} 
 a[data-tooltip][data-placement="top"]::before {
     bottom: 100%;
     left: 0;
@@ -269,7 +268,9 @@ a[data-tooltip][data-placement="top"]::after {
 }
 
 .detailsPage {
-    height: 90vh;
+    background-size: auto;
+    background-repeat: no-repeat;
+    height: 100vh;
     display: flex;
     background-position: center;
     align-items: flex-end;
@@ -278,7 +279,7 @@ a[data-tooltip][data-placement="top"]::after {
 .banner {
     display: flex;
     justify-content: space-around;
-    align-items: flex-end;
+    max-width: max-content;
     opacity: 0.9;
     margin-bottom: 30px;
 }
@@ -294,14 +295,36 @@ a[data-tooltip][data-placement="top"]::after {
 }
 
 .details {
+    background-color: #222;
+    border-radius: 10px;
+    color: #fff;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     padding: 15px 50px;
-    width: 40%;
+    text-align: left;
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-left: 20%;
+    margin-right: 10%;
+}
+/*
+.details {
+    padding: 15px 50px;
+    width: 70%;
     color: white;
     text-align: left;
-    height: fit-content;
+    height: 100%;
     background-color: #222222;
     border-radius: 10px;    
+    margin-left: 20%;
+    margin-right: 10%;
+
+    margin-top: 10%;
+
 }
+*/
 .details:hover {
     background-color: #333333;
 }
@@ -333,7 +356,7 @@ a[data-tooltip][data-placement="top"]::after {
     text-transform: uppercase;
 }
 .moviePosterD {
-    width: 400px;
+    width: 300px;
     border-radius: 10px;    
 }
 
