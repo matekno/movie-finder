@@ -30,7 +30,7 @@ const Movie = () => {
                 </div>
                 <div className="info">
                     <h1 className='title'> {movie.original_title} </h1>
-                    <hr style="opacity: 0.1;"></hr>
+                    <hr style={"opacity: 0.1;"}></hr>
                     <div className="row">
                         <h5 className="date"> {movie.release_date} </h5>
                         <div className="genres">

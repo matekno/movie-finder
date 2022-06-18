@@ -1,3 +1,4 @@
+/*
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
 @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 
@@ -164,7 +165,6 @@ label {
     padding: 0;
 }
 
-/****** Style Star Rating Widget *****/
 .rating {
     border: none;
     float: left;
@@ -193,22 +193,16 @@ label {
     float: right;
 }
 
-/***** CSS Magic to Highlight Stars on Hover *****/
 .rating>input:checked~label,
 .rating:not(:checked)>label:hover,
 .rating:not(:checked)>label:hover~label {
-    /* show gold star when clicked */
-    /* hover current star */
     color: #ffd700;
 }
 
-/* hover previous stars in list */
 .rating>input:checked+label:hover,
 .rating>input:checked~label:hover,
 .rating>label:hover~input:checked~label,
 .rating>input:checked~label:hover~label {
-    /* hover current star when changing rating */
-    /* lighten current selection */
     color: #ffed85;
 }
 
@@ -224,14 +218,12 @@ a[data-tooltip]::after {
 }
 
 a[data-tooltip]::before {
-    /* * using data-tooltip instead of title so we * don't have the real tooltip overlapping */
     content: attr(data-tooltip);
     background: #000;
     color: #fff;
     font-size: 13px;
     padding: 5px;
     border-radius: 5px;
-    /* we don't want the text to wrap */
     white-space: nowrap;
     text-decoration: none;
 }
@@ -248,8 +240,6 @@ a[data-tooltip]:hover::after {
     display: block;
 }
 
-/** positioning **/
-/* top tooltip */
 html, body {
     height:100%;
 } 
@@ -322,7 +312,7 @@ a[data-tooltip][data-placement="top"]::after {
     margin-left: 20%;
     margin-right: 10%;
 }
-/*
+
 .details {
     padding: 15px 50px;
     width: 70%;
@@ -337,7 +327,7 @@ a[data-tooltip][data-placement="top"]::after {
     margin-top: 10%;
 
 }
-*/
+
 .details:hover {
     background-color: #333333;
 }
@@ -428,3 +418,4 @@ a[data-tooltip][data-placement="top"]::after {
     margin-left: 10%;
     margin-bottom: 6%;
 }
+*/
