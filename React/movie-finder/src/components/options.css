@@ -30,7 +30,7 @@ body {
   width: 100px;
   height: 40px;
   color: rgba(9, 9, 121, 1); 
-  border-radius: 25px;
+  border-radius: 20px;
   list-style: none;
   display: grid;
   place-items: center;
@@ -42,8 +42,11 @@ body {
     rgba(9, 9, 121, 1) 64%);
   line-height: 20px;
   margin-left: 5px;
-  border-width :medium;
-  border-color: rgb(44, 44, 167);
+  border-width: 100px;
+  border-color: linear-gradient(
+    90deg,
+    rgb(40, 149, 221) 0%,
+    rgba(9, 9, 121, 1) 64%);
   background-color: #fff;
 
 }
