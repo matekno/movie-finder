@@ -4,7 +4,7 @@ import './global.css';
 import { GetMoviesByKeyword } from "../helpers/searchBarHelper";
 
 const SearchBar = () =>{
-    const [input, setInput] = useState('cars');
+    const [input, setInput] = useState('');
     const [movies, setMovies] = useState();
     const inputeado = async(e) =>{
         setInput(e.target.value);
