@@ -41,8 +41,6 @@ a:hover {
 }
 
 .details {
-    padding: 190px 0 0 280px;
-    margin-bottom: 40%;
 }
 
 .details .title1 {
@@ -76,15 +74,9 @@ a:hover {
 .detailsPage {
     background-size: auto;
     background-repeat: no-repeat;
-    height: 100vh;
-    display: flex;
-    background-position: center;
-    align-items: flex-end;
+    /*filter: blur(10px);*/
 }
 
-.detallesPagina{
-    
-}
 
 .details {
     border-radius: 10px;
@@ -92,10 +84,7 @@ a:hover {
     padding: 15px 50px;
     text-align: center;
     display: block;
-    width: 130%;
-    height: 1100%;
-    margin-left: 80%;
-    margin-right: 10%;
+    width: 60%;
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 63%, rgba(0,161,194,1) 100%);
 }
 
@@ -180,11 +169,20 @@ a:hover {
     display: inline-block;
 }
 
+
+.detailsPage {
+    background-size: auto;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    background-position: center;
+    align-items: flex-end;
+}
+
 .moviePosterD {
     width: 300px;
     border-radius: 5px;    
-    margin-bottom: 78%;
-    margin-left: 70%;
+    margin-left: 30%;
     animation-name: shadowAnimation;
     animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -223,3 +221,21 @@ a:hover {
         display: none;
     }
 }
+
+#garden {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    grid-template-rows: 100%;
+    align-items: center;
+}
+
+.primera{
+    grid-column-start:1;
+    grid-row-start:1;
+}
+
+.segunda{
+    grid-column-start:2;
+    grid-row-start:1;
+}
+

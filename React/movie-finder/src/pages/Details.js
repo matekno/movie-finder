@@ -29,12 +29,14 @@ const Details = () => {
         <>
 
 
-        <div className='detailsPage' style={{ backgroundImage: `url(${backdropImage})`}}>
+        <div className='detailsPage' id="garden" style={{ backgroundImage: `url(${backdropImage})`}}>
             <noscript>aca nomas a la foto de fondo le quiero agregar este estilo:     filter: blur(10px);</noscript>
-            <div className=''>
+            
+            <div className='primera'>
                 <a href={movie.homepage}> <img alt='moviePoster' className='moviePosterD ' src={"https://image.tmdb.org/t/p/original" + movie.poster_path}></img> </a>
             </div>
-            <div className='banner'>
+
+            <div className='segunda'>
                 <div className='details'>
                     <div className='rateAndLang'>
                         <i><h5 className='movieReleaseDateD'> {movie.release_date} </h5></i>
