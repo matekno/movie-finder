@@ -1,13 +1,17 @@
 import React from "react";
 import './global.css';
+import { Link,useNavigate   } from "react-router-dom";
+
 // import {BrowserRouter, Routes, Route, useNavigate, useParams} from "react-router-dom";
 
 
 const Card = ({ movie }) => {
-    // let navigate = useNavigate();
-    // const redirigir = (url) =>{
-    //     navigate(url);
-    // }
+    let navigate = useNavigate();
+    const redirigir = (url) =>{
+        navigate(url);
+    }
+    const redir = `/details/${movie.id}`;
+    
 
     return (
         <div className="ml-5 crd">
@@ -19,9 +23,11 @@ const Card = ({ movie }) => {
                 <div className="descriptions">
                     <h1 className="movieTitle">{movie.original_title}</h1>
                     <p className="dad">{movie.overview}</p>
-                    <button className="niceButton">
-                        Ver más
-                    </button>
+                    <Link to={redir}>
+                        <button className="niceButton">
+                            Ver más
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>

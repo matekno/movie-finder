@@ -15,7 +15,6 @@ function Main() {
                 <Route path='/' element={<App />} />
                 <Route path='/movie/:id' element={<Movie />} />
                 <Route path='/details/:id' element={<Details />} />
-
             </Routes>
         </BrowserRouter>
     );
