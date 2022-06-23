@@ -538,3 +538,26 @@ body .crd .multi-button:focus-within {
 
 
 /*end hovered icons*/
+
+/*PELICULA RESULTANTE*/
+.peliculaResultante{
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 30% 70%;
+  align-items: center;
+  width: 80%;
+  height: 150px;
+  background-color: red;
+  margin-bottom: 15px;
+}
+
+.fotitoResultante{
+  grid-column-start:1;
+  grid-row-start:2;
+  height: 150px;
+}
+
+.tituloResultante{
+  grid-column-start:1;
+  grid-row-start:1;
+}
