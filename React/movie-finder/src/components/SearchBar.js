@@ -3,21 +3,24 @@ import { useState } from "react";
 import './global.css';
 import { GetMoviesByKeyword } from "../helpers/searchBarHelper";
 
-const SearchBar = () =>{
+const SearchBar = () => {
     const [input, setInput] = useState('');
     const [movies, setMovies] = useState();
-    const inputeado = async(e) =>{
+    const inputeado = (e) => {
         setInput(e.target.value);
-        await setMovies(GetMoviesByKeyword(input));
-        console.log(movies);
+        // setMovies(GetMoviesByKeyword(input));
+        console.log(input);
     }
-    return(
-        <div className="search-container">
-            <input type="text" name="search" placeholder="Buscar..." className="search-input" value={input} onInput={e => inputeado(e)} />
-                <a href="#" className="search-btn">
+    return (
+        <form>
+            <div className="search-container">
+                <input type="text" name="search" placeholder="Buscar..." className="search-input" value={input} onInput={e => inputeado(e)} />
+                <a href={`/search/${input}`} className="search-btn">
                     <i className="fas fa-search"></i>
                 </a>
-        </div>
+            </div>
+        </form>
+
     )
 }
 export default SearchBar
