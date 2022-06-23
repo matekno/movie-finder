@@ -375,6 +375,12 @@ ESTOS SON LOS STYLES DE LA SCROLLBAR QUE NO SE BIEN COMO PONERSELOS PORQUE NO ES
   transform: scale(1.1);
 }
 
+.niceButton{
+  border-radius: 10%;
+  padding: 5%;
+  background: linear-gradient(90deg, hsla(234, 98%, 35%, 1) 6%, hsla(224, 71%, 54%, 1) 64%, hsla(214, 100%, 52%, 1) 100%);
+}
+
 .niceTitle {
   margin-bottom: 20px;
   text-align: center;

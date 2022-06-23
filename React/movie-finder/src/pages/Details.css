@@ -85,7 +85,8 @@ a:hover {
     text-align: center;
     display: block;
     width: 60%;
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 63%, rgba(0,161,194,1) 100%);
+    background: linear-gradient(90deg, hsla(0, 0%, 0%, 1) 0%, hsla(234, 100%, 16%, 1) 28%, hsla(230, 76%, 29%, 1) 59%, hsla(228, 62%, 44%, 1) 80%, hsla(227, 62%, 56%, 1) 100%);
+
 }
 
 .details:hover {
