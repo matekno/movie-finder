@@ -2,9 +2,6 @@ import React from "react";
 import './global.css';
 import { Link,useNavigate   } from "react-router-dom";
 
-// import {BrowserRouter, Routes, Route, useNavigate, useParams} from "react-router-dom";
-
-
 const Card = ({ movie }) => {
     let navigate = useNavigate();
     const redirigir = (url) =>{

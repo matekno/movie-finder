@@ -549,22 +549,48 @@ body .crd .multi-button:focus-within {
 /*PELICULA RESULTANTE*/
 .peliculaResultante{
   display: grid;
-  grid-template-columns: 20% 80%;
+  grid-template-columns: 15% 85%;
   grid-template-rows: 30% 70%;
   align-items: center;
   width: 80%;
   height: 150px;
-  background-color: red;
+  background: linear-gradient(90deg, hsla(0, 0%, 0%, 1) 0%, hsla(234, 100%, 16%, 1) 28%, hsla(230, 76%, 29%, 1) 59%, hsla(228, 62%, 44%, 1) 80%, hsla(227, 62%, 56%, 1) 100%);
   margin-bottom: 15px;
+  color: white;
+  border-radius: 10px;
+}
+
+.peliculaResultante .title1 {
+  color: white;
+  font-size: 34px;
+  position: relative;
+  font-weight: bold;
+  grid-column-start:2;
+  grid-row-start:1;
+  margin-top: 2%;
+  text-align: left;
+}
+
+.peliculasResultantes{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 15%
 }
 
 .fotitoResultante{
   grid-column-start:1;
   grid-row-start:2;
   height: 150px;
+  margin-bottom: 45px;
+  border-radius: 10px;
 }
 
-.tituloResultante{
-  grid-column-start:1;
-  grid-row-start:1;
+.overviewResultante{
+  font-size: 15px;
+  grid-column-start:2;
+  grid-row-start:2;
+  text-align: left;
+  font-weight: thin;
+
 }

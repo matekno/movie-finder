@@ -59,7 +59,8 @@ const Details = () => {
                     <div style={{ marginBottom: '15px' }}></div>
                     <div style={{ display: 'inline-flex', marginBottom: '20px', marginTop: '5px' }}>
                         {
-                            movie.type !== "tv" ? movie.genres === undefined ? "" : movie.genres.map((genre, index) => {
+
+                            movie.type !== "tv" ? movie.genres === undefined ? "" : movie.genres.slice(0,3).map((genre, index) => {
                                 return (
                                     <div>
                                         <b><h4 key={index} style={{ marginRight: '10px', fontWeight: 'normal'}} className='customButton'> {genre.name} </h4></b>

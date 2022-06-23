@@ -16,8 +16,7 @@ const Movie = () => {
             console.log(peli);
         })();
     }, [])
-    /*inspeccionar esta: https://tmdb-dagmawibabi.vercel.app/*/
-    /*ahora esta: https://www.themoviedb.org/movie/920-cars?language=es*/
+
     let backdropImage = "https://image.tmdb.org/t/p/original" + movie.backdrop_path;
     
     
@@ -46,8 +45,6 @@ const Movie = () => {
                     <p className="descripcion">
                         {movie.overview}
                     </p>
-
-
                 </div>
             </div>
         </>

@@ -2,7 +2,8 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { GetMoviesByKeyword } from "../helpers/searchBarHelper";
 import './global.css'
-import Card from "./Card";
+import {Link} from "react-router-dom";
+
 
 
 const SearchResults = () => {
@@ -17,22 +18,28 @@ const SearchResults = () => {
         })();
     }, []);
 
+
     return (
         <div>
-            <h1>RESULTADOS DE TU BUSQUEDA EN CONSOLA</h1>
             {movies.map(m => {
                 return (
-                    <div className="peliculaResultante">
-                        {/* <Card key={m.id} movie={m}/> */}
-                        <h2 className="tituloResultante">{m.original_title}</h2>
+                    <Link to={`/details/${m.id}` }>
 
-                        <img alt='moviePoster' className="fotitoResultante" src={"https://image.tmdb.org/t/p/original" + m.poster_path}></img>
+                    <div className="peliculasResultantes">
+                    <div className="peliculaResultante">
+                    <img alt='moviePoster' className="fotitoResultante" src={"https://image.tmdb.org/t/p/original" + m.poster_path}></img>
+
+                        <h2 className="title1">{m.original_title}</h2>
+
                         <h4 className="overviewResultante">{m.overview}</h4>
                     </div>
+                    </div>
+                    </Link>
+
                 )
             })}
         </div>
     );
 }
 
-export default SearchResults
+export default SearchResults;
